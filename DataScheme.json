@@ -1,0 +1,72 @@
+{
+  //StatsEntity
+  "defense*base": 95.4398,
+  "max_health*base": 2277.66,
+  "resistance*base": 0,
+  "mastery*base": 0,
+  "crit_chance*bpct": 0.1,
+  "cd_haste*base": 0,
+  "phy_dmg*base": 110.73,
+  "accuracy*base": 0,
+  "atk_speed*bpct": 0,
+  "crit_bonus*bpct": 0.5,
+
+  "attack_frequency": 0.4,
+
+
+  //GrowthRuleEntity
+  "lv_up_base": {
+    "max_health*base": 71.18,
+    "phy_dmg*base": 3.46,
+    "resistance*base": 0,
+    "accuracy*base": 0,
+    "mastery*base": 0,
+    "crit_bonus*bpct": 0,
+    "crit_chance*bpct": 0,
+    "atk_speed*bpct": 0,
+    "defense*base": 2.98,
+    "cd_haste*base": 0
+  },
+
+
+  //SkillsEntity
+  "skill": {
+    "slot4": {
+      "skillid": 2072030,
+      "skilldesc": "Grants Defense Up II to allies within range for 10.0s.",
+      "skillname": "Circle of Protection",
+      "skillPath": "UI/Image/skill_icon/hero_skill_icon/icon_skill_20720_3.png"
+    },
+    "slot3": {
+      "skillid": 2072020,
+      "skilldesc": "Deals radiant damage to an enemy.",
+      "skillname": "Light Orb",
+      "skillPath": "UI/Image/skill_icon/hero_skill_icon/icon_skill_20720_2.png"
+    },
+    "slot2": {
+      "skillid": 2072010,
+      "skilldesc": "Has a 50.0% chance to gain Damage Reduction for 5.0s when casting skills.",
+      "skillname": "Secondary Protection",
+      "skillPath": "UI/Image/skill_icon/hero_skill_icon/icon_skill_20720_1.png"
+    }
+  },
+
+
+  //OtherInformation
+  "id": 20720,
+  "element": "Radiance",
+  "orientation": "Support",
+  "heroname": "",
+  "atk_type": "range",
+  "hero_alignment": "Lawful Neutral",
+  "hero_race": "Human",
+  "show_title": "Grey Wizard",
+  "heroPorPath": "UI/Image/hero_show_pic/pic_hero_show_20720.png",
+  "userIconId": null,
+  "rarity": "Common",
+  "hero_career": "Wizard",
+  "heroId": "None",
+  "heroIdPath": "UI/Image/hero_head/pic_hero_head_20720.png",
+  "ability_replace": 2,
+  "head_icon": 120720
+}

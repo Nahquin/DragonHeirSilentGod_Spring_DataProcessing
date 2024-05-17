@@ -1,0 +1,106 @@
+{
+"attack_frequency": 0.4,
+
+  //StatsEntity
+  "max_health*base": 2630.97,
+  "phy_dmg*base": 150.45,
+  "resistance*base": 0,
+  "accuracy*base": 0,
+  "mastery*base": 0,
+  "crit_bonus*bpct": 0.5,
+  "crit_chance*bpct": 0.1,
+  "atk_speed*bpct": 0,
+  "defense*base": 124.7794,
+  "cd_haste*base": 0,
+
+  //GrowthRuleEntity
+  "lv_up_base": {
+    "max_health*base": 82.22,
+    "phy_dmg*base": 4.7,
+    "resistance*base": 12,
+    "accuracy*base": 12,
+    "mastery*base": 0,
+    "crit_bonus*bpct": 0,
+    "crit_chance*bpct": 0,
+    "atk_speed*bpct": 0,
+    "defense*base": 3.9,
+    "cd_haste*base": 0
+  },
+
+
+  //Information
+  "captain_slot_path": "UI/Image/skill_icon/hero_team_skill_icon/icon_duizhangji_6.png",
+  "id": 20770,
+  "captain_slot": "Increases all allies' Accuracy by 50.0 in all battles.",
+  "element": "Ice",
+  "orientation": "Support",
+  "heroname": "",
+  "ability_replace": 2,
+  "atk_type": "range",
+  "hero_alignment": "Chaotic Evil",
+  "hero_race": "The Unstill",
+  "show_title": "The Thorn",
+  "heroPorPath": "UI/Image/hero_show_pic/pic_hero_show_20770.png",
+  "userIconId": null,
+  "captain_enable_combat_types": 1000,
+  "rarity": "Legendary",
+  "head_icon": 120770,
+  "hero_career": "Wizard",
+  "heroId": "None",
+  "heroIdPath": "UI/Image/hero_head/pic_hero_head_20770.png",
+
+  //Inspiration
+  "inspiration5": {
+    "show_name": "Inspiration 5",
+    "id": 7240002,
+    "spell_tips": "Ignores 35% of the target's Resistance."
+  },
+  "inspiration4": 7250000,
+  "inspiration3": 7250000,
+  "inspiration2": {
+    "show_name": "Inspiration 2",
+    "id": 7210001,
+    "spell_tips": "When inflicting a debuff, there is a 70% chance of extending its duration by 30%."
+  },
+  "inspiration1": {
+    "show_name": "Inspiration 1",
+    "id": 7200005,
+    "spell_tips": "The hero takes 20% less crit damage."
+  },
+  "inspiration3_abt": [
+    1074
+  ],
+  "inspiration3_abt_val": [
+    30
+  ],
+  "inspiration4_abt": [
+    1068
+  ],
+  "inspiration4_abt_val": [
+    50
+  ],
+
+
+  //Skills
+  "skill": {
+    "slot4": {
+      "skillid": 2077030,
+      "skilldesc": "Deals cold damage to the enemy, dispelling all their buffs and reducing their Ultimate Energy by 100.0, with a 100.0% chance of inflicting Frozen for 5.0s and Attack Penalty II for 10.0s.",
+      "skillname": "Frozen Spike",
+      "skillPath": "UI/Image/skill_icon/hero_skill_icon/icon_skill_20770_3.png"
+    },
+    "slot3": {
+      "skillid": 2077020,
+      "skilldesc": "Grants a shield for 10.0s and Defense Up II for 5.0s to the hero and the ally with the lowest Current HP.",
+      "skillname": "Withering Armor",
+      "skillPath": "UI/Image/skill_icon/hero_skill_icon/icon_skill_20770_2.png"
+    },
+    "slot2": {
+      "skillid": 2077010,
+      "skilldesc": "When inflicted with Control, the hero is immune to it and has a 100.0% chance of inflicting Frozen on the caster for 5.0s.",
+      "skillname": "Icy Thorn",
+      "skillPath": "UI/Image/skill_icon/hero_skill_icon/icon_skill_20770_1.png"
+    }
+  }
+
+}
