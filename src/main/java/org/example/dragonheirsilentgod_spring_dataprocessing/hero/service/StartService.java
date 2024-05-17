@@ -1,12 +1,12 @@
 package org.example.dragonheirsilentgod_spring_dataprocessing.hero.service;
 
-
 import jakarta.annotation.PostConstruct;
 import org.example.dragonheirsilentgod_spring_dataprocessing.hero.entity.*;
-import org.example.dragonheirsilentgod_spring_dataprocessing.hero.repository.HeroRepository;
+import org.example.dragonheirsilentgod_spring_dataprocessing.hero.repository.*;
 import org.json.JSONArray;
 import org.json.JSONObject;
 import org.json.JSONTokener;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,8 +22,25 @@ public class StartService {
 
     private static final String JSONURL = "DragonDATA-S1&S2\\releasedata\\release_257520_en_2023121217\\hero\\hero.json";
 
+
+
+    @Autowired
+    private GrowthRuleRepository growthRuleRepository;
     @Autowired
     private HeroRepository heroRepository;
+    @Autowired
+    private InformationRepository informationRepository;
+    @Autowired
+    private InspirationRepository inspirationRepository;
+    @Autowired
+    private SkillRepository skillRepository;
+    @Autowired
+    private StatsRepository statsRepository;
+
+
+
+    @Autowired
+    private ModelMapper modelMapper;
 
     @PostConstruct
     public void start() {
@@ -35,25 +52,26 @@ public class StartService {
                 // InformationEntity létrehozása
                 InformationEntity informationEntity = new InformationEntity();
                 informationEntity.setCaptainSlotPath(heroData.optString("captain_slot_path"));
-                informationEntity.setId(Integer.valueOf(heroData.optString("id")));
+                informationEntity.setId(heroData.optInt("id"));
                 informationEntity.setCaptainSlot(heroData.optString("captain_slot"));
                 informationEntity.setElement(heroData.optString("element"));
                 informationEntity.setOrientation(heroData.optString("orientation"));
                 informationEntity.setHeroname(heroData.optString("heroname"));
-                informationEntity.setAbilityReplace(Integer.parseInt(heroData.optString("ability_replace")));
+                informationEntity.setAbilityReplace(heroData.optInt("ability_replace"));
                 informationEntity.setAtkType(heroData.optString("atk_type"));
                 informationEntity.setHeroAlignment(heroData.optString("hero_alignment"));
                 informationEntity.setHeroRace(heroData.optString("hero_race"));
                 informationEntity.setShowTitle(heroData.optString("show_title"));
                 informationEntity.setHeroPorPath(heroData.optString("heroPorPath"));
-                informationEntity.setUserIconId(Long.valueOf(heroData.optString("userIconId")));
-                informationEntity.setCaptainEnableCombatTypes(Integer.parseInt(heroData.optString("captain_enable_combat_types")));
+                informationEntity.setUserIconId(heroData.optLong("userIconId"));
+                informationEntity.setCaptainEnableCombatTypes(heroData.optInt("captain_enable_combat_types"));
                 informationEntity.setRarity(heroData.optString("rarity"));
-                informationEntity.setHeadIcon(Long.valueOf(heroData.optString("head_icon")));
+                informationEntity.setHeadIcon(heroData.optLong("head_icon"));
                 informationEntity.setHeroCareer(heroData.optString("hero_career"));
                 informationEntity.setHeroId(heroData.optString("heroId"));
                 informationEntity.setHeroIdPath(heroData.optString("heroIdPath"));
 
+                modelMapper.map(heroData, InformationEntity.class);//?
 
                 // InspirationEntityk létrehozása
                 List<InspirationEntity> inspirations = new ArrayList<>();
@@ -111,6 +129,11 @@ public class StartService {
                 heroEntity.setSkills(skillsList);
 
 
+                growthRuleRepository.save(growthRuleEntity);
+                informationRepository.save(informationEntity);
+                inspirationRepository.saveAll(inspirations);
+                skillRepository.saveAll(skillsList);
+                statsRepository.save(statsEntity);
                 heroRepository.save(heroEntity);
             }
         } catch (FileNotFoundException e) {

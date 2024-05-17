@@ -34,7 +34,7 @@ public class InformationEntity {
     private String heroname;
 
     @Column(name = "ability_replace")
-    private int abilityReplace;
+    private Integer abilityReplace;
 
     @Column(name = "atk_type")
     private String atkType;
@@ -55,7 +55,7 @@ public class InformationEntity {
     private Long userIconId;
 
     @Column(name = "captain_enable_combat_types")
-    private int captainEnableCombatTypes;
+    private Integer captainEnableCombatTypes;
 
     @Column(name = "rarity")
     private String rarity;
