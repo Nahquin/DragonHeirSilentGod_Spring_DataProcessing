@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class SkillDTO {
 
+    private String slot;
     private String changeSlot;
     private Integer skillid;
     private String skilldesc;

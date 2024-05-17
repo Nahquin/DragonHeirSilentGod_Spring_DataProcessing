@@ -31,7 +31,7 @@ public class HeroService {
         // más entitások létrehozása és mentése
 
         HeroEntity heroEntity = new HeroEntity();
-        heroEntity.setHeroOtherInformation(heroOtherInformationEntity);
+        heroEntity.setInformation(heroOtherInformationEntity);
         // többi entitás beállítása
 
         heroRepository.save(heroEntity);

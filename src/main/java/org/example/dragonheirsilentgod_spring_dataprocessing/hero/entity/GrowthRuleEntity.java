@@ -10,10 +10,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GrowthRuleEntity {
-    @ManyToOne
-    @JoinColumn(name = "lvl_up_base_hero_stat_id")
-    StatsEntity lvlUpBase = new StatsEntity();
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long growthRuleId;
+
+    @ManyToOne
+    @JoinColumn(name = "lvl_up_base_hero_stat_id")
+    StatsEntity lvlUpStats = new StatsEntity();
 }

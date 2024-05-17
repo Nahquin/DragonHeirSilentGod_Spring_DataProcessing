@@ -15,6 +15,9 @@ public class SkillEntity {
     @Column(name = "id")
     private Long id;
 
+    @Column(name = "slot")
+    private String slot;
+
     @Column(name = "skill_id")
     private Integer skillid;
 

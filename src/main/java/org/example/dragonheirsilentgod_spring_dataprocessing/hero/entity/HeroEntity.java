@@ -23,6 +23,10 @@ public class HeroEntity {
     @JoinColumn(name = "information_id")
     private InformationEntity information;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "growthRuleId")
+    private GrowthRuleEntity growthRule;
+
     @OneToMany(mappedBy = "hero", cascade = CascadeType.ALL)
     private List<InspirationEntity> inspirations;
 
